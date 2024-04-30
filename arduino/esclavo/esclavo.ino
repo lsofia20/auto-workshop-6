@@ -8,7 +8,7 @@ const int CANTIDAD_BYTES = 7;
 const int PIN_SENSOR = A0;
 const int TIEMPO_ESPERA = 1000;
 const int MAX_VOLTAJE = 5;
-const int MAX_ANALOGICO = 1023;
+const int MAX_ANALOGICO = 1024;
 const int VALOR_AJUSTE = 100;
 
 // Variables
@@ -29,7 +29,7 @@ void setup() {
 void enviar_datos() {
   // Leer el valor del sensor analógico y convertirlo a temperatura
   int valor_analogico = analogRead(PIN_SENSOR);
-  float temperatura = (valor_analogico * MAX_VOLTAJE * VALOR_AJUSTE) / MAX_ANALOGICO;
+  float temperatura = (MAX_VOLTAJE * valor_analogico * VALOR_AJUSTE) / MAX_ANALOGICO;
     
   // Mostrar los datos enviados en el puerto serial
   Serial.println("Datos enviados: " + String(temperatura));
