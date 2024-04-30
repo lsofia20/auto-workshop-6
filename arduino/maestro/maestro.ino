@@ -10,9 +10,9 @@ const int LIMITE_TEMPERATURA = 30;
 
 // Función de inicialización
 void setup() {
-  Wire.begin();
   Serial.begin(9600);
   pinMode(PIN_LED , OUTPUT); 
+  Wire.begin(CANAL_COMUNICACION);
 }
 
 // Función principal
