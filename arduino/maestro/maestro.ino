@@ -1,7 +1,7 @@
 // Librerias necesarias
 #include <Wire.h>
 
-// Definición de constantes
+// Constantes
 const int CANAL_COMUNICACION = 8;
 const int CANTIDAD_BYTES = 7;
 const int PIN_LED = 13;
@@ -11,7 +11,7 @@ const int LIMITE_TEMPERATURA = 30;
 // Función de inicialización
 void setup() {
   Serial.begin(9600);
-  pinMode(PIN_LED , OUTPUT); 
+  pinMode(PIN_LED, OUTPUT); 
   Wire.begin(CANAL_COMUNICACION);
 }
 
